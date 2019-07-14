@@ -6,7 +6,7 @@
 
     <bean id="numberGenerator" class="rock.learning.NumberGeneratorImpl" />
 
-    <bean id="game" class="rock.learning.GameImpl">
+    <bean id="game" class="rock.learning.GameImpl" init-method="reset">
         <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 
