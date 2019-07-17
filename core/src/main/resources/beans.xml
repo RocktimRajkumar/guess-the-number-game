@@ -7,11 +7,6 @@
        http://www.springframework.org/schema/context
        https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
-
-    <bean id="numberGenerator" class="rock.learning.NumberGeneratorImpl"/>
-
-    <bean id="game" class="rock.learning.GameImpl">
-    </bean>
-
+    <context:component-scan base-package="rock.learning"/>
+    
 </beans>
