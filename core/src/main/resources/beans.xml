@@ -12,7 +12,6 @@
     <bean id="numberGenerator" class="rock.learning.NumberGeneratorImpl"/>
 
     <bean id="game" class="rock.learning.GameImpl">
-        <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
-     
+
 </beans>
