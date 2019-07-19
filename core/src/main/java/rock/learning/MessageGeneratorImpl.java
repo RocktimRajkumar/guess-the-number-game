@@ -19,15 +19,19 @@ public class MessageGeneratorImpl implements MessageGenerator {
 
     // ==== init methods ====
     @PostConstruct
-    public void init(){
-        log.info("game = {}",game);
+    public void init() {
+        log.info("game = {}", game);
     }
 
     // ==== Public Methods ====
 
     @Override
     public String getMainMessage() {
-        return "getMainMsg";
+        return "Number is between " +
+                game.getSmallest() +
+                " and " +
+                game.getBiggest() +
+                ". Can you guess it?";
     }
 
     @Override
