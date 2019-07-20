@@ -10,7 +10,8 @@
 
 	<modules>
 		<module>core</module>
-	</modules>
+        <module>console</module>
+    </modules>
 
 	<properties>
 		<logback.version>1.2.3</logback.version>
