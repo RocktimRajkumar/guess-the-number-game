@@ -11,5 +11,12 @@
 
     <artifactId>console</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>rock.learning</groupId>
+            <artifactId>core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

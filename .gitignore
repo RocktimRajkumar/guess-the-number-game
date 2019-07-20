@@ -1,2 +1,6 @@
 /core/target
 /.idea
+/console/target
+/guess-the-number-game.iml
+/core/core.iml
+/console/console.iml

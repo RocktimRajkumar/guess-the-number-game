@@ -1,10 +1,12 @@
-package rock.learning;
+package src.main.java.rock.learning.console;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import rock.learning.AppConfig;
+import rock.learning.MessageGenerator;
+import rock.learning.NumberGenerator;
 
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
