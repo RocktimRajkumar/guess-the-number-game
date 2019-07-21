@@ -39,7 +39,7 @@ public class GameImpl implements Game {
     }
 
     @PreDestroy
-    public void preDestroy(){
+    public void preDestroy() {
         log.info("PreDestroy in in game");
     }
 
@@ -76,6 +76,9 @@ public class GameImpl implements Game {
     }
 
     @Override
+    public int getGuessCount() { return guessCount; }
+
+    @Override
     public void check() {
         checkValidNumberRange();
         if (validNumberRange) {
@@ -85,7 +88,7 @@ public class GameImpl implements Game {
                 smallest = guess + 1;
             }
         }
-        remainingGuesses --;
+        remainingGuesses--;
     }
 
     @Override
