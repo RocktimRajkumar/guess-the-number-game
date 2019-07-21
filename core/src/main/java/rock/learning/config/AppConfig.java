@@ -1,8 +1,9 @@
-package rock.learning;
+package rock.learning.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import rock.learning.*;
 
 @Configuration
 @ComponentScan(basePackages = "rock.learning")

@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import rock.learning.AppConfig;
+import rock.learning.config.AppConfig;
 import rock.learning.MessageGenerator;
 import rock.learning.NumberGenerator;
 
