@@ -7,11 +7,18 @@ import org.springframework.context.annotation.Configuration;
 public class GameConfig {
 
     // ==== fields ====
-    private int maxNumber =50;
+    private int maxNumber =100;
+
+    private int guessCount = 8;
 
     // ==== bean methods ====
     @Bean
-    public int getMaxNumber() {
+    public int maxNumber() {
         return maxNumber;
+    }
+
+    @Bean
+    public int guessCount() {
+        return guessCount;
     }
 }
