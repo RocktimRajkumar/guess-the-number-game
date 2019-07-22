@@ -2,10 +2,12 @@ package rock.learning.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import rock.learning.GuessCount;
 import rock.learning.MaxNumber;
 
 @Configuration
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     // ==== fields ====
