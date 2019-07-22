@@ -12,10 +12,10 @@ import rock.learning.MaxNumber;
 public class GameConfig {
 
     // ==== fields ====
-    @Value("${game.maxNumber}")
+    @Value("${game.maxNumber : 50}")
     private int maxNumber;
 
-    @Value("${game.guessCount}")
+    @Value("${game.guessCount : 5}")
     private int guessCount;
 
     // ==== bean methods ====
