@@ -6,17 +6,21 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import rock.learning.GuessCount;
 import rock.learning.MaxNumber;
+import rock.learning.MinNumber;
 
 @Configuration
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     // ==== fields ====
-    @Value("${game.maxNumber : 50}")
+    @Value("${game.maxNumber:70}")
     private int maxNumber;
 
-    @Value("${game.guessCount : 5}")
+    @Value("${game.guessCount:5}")
     private int guessCount;
+
+    @Value("${game.minNumber:2}")
+    private int minNumber;
 
     // ==== bean methods ====
     @Bean
@@ -29,5 +33,11 @@ public class GameConfig {
     @GuessCount
     public int guessCount() {
         return guessCount;
+    }
+
+    @Bean
+    @MinNumber
+    public int minNumber() {
+        return minNumber;
     }
 }
