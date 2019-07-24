@@ -12,10 +12,6 @@ import rock.learning.*;
 public class AppConfig {
 
     // ==== Bean methods ====
-    @Bean
-    public NumberGenerator numberGenerator (){
-        return new NumberGeneratorImpl();
-    }
 
     @Bean
     public Game game (){
