@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+@Component
 public class GameImpl implements Game {
 
     // ==== constants ====
@@ -15,12 +16,8 @@ public class GameImpl implements Game {
 
     // ==== Fields ====
 
-    @Autowired
-    private NumberGenerator numberGenerator;
-
-    @Autowired
-    @GuessCount
-    private int guessCount;
+    private final NumberGenerator numberGenerator;
+    private final int guessCount;
 
     private int number;
     private int guess;
@@ -29,6 +26,13 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
+    // ==== constructor ====
+
+    @Autowired
+    public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
+        this.numberGenerator = numberGenerator;
+        this.guessCount = guessCount;
+    }
 
     // ==== init method ====
     @PostConstruct
@@ -80,7 +84,9 @@ public class GameImpl implements Game {
     }
 
     @Override
-    public int getGuessCount() { return guessCount; }
+    public int getGuessCount() {
+        return guessCount;
+    }
 
     @Override
     public void check() {
